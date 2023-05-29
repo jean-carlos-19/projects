@@ -1,0 +1,34 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": {
+    "name": "Jean Carlos Piguave Alvarado",
+    "email": "piguavejc@gmail.com",
+    "url": "https://piguavejc-portfolio-master.onrender.com/"
+  },
+  "engines": {
+    "node": "16.x"
+  },
+  "config": {
+    "port": "3000"
+  },
+  "scripts": {
+    "build": "yarn tsc  && yarn tsc-alias",
+    "dev": "nodemon ./src/index.ts",
+    "start": "node ./dist/index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0",
+    "pg": "^8.11.0",
+    "typescript": "^5.0.4"
+  }
+}
