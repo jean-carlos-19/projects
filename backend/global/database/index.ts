@@ -1,1 +1,1 @@
-export {Postgresql} from "./postgresql";
+export { Postgresql } from "./postgresql";
