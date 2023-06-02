@@ -28,8 +28,26 @@
     "module": "commonjs" /* Specify what module code is generated. */,
     // "rootDir": "./",                                  /* Specify the root folder within your source files. */
     // "moduleResolution": "node10",                     /* Specify how TypeScript looks up a file from a given module specifier. */
-    "baseUrl": "./",                                  /* Specify the base directory to resolve non-relative module names. */
-    // "paths": {},                                      /* Specify a set of entries that re-map imports to additional lookup locations. */
+    "baseUrl": "./" /* Specify the base directory to resolve non-relative module names. */,
+    "paths": {
+      "global/database": ["./global/database"],
+      "global/http": ["./global/http"],
+      
+      "projects/domain/entity": ["./src/projects/domain/entity"],
+      "projects/domain/error": ["./src/projects/domain/error"],
+      "projects/domain/value": ["./src/projects/domain/value"],
+      "projects/domain/service": ["./src/projects/domain/service"],
+
+      "projects/application": ["./src/projects/application"],
+
+      "projects/infrastructure/controller": [
+        "./src/projects/infrastructure/controller"
+      ],
+      "projects/infrastructure/repository": [
+        "./src/projects/infrastructure/repository"
+      ],
+      "projects/infrastructure/route": ["./src/projects/infrastructure/route"]
+    } /* Specify a set of entries that re-map imports to additional lookup locations. */,
     // "rootDirs": [],                                   /* Allow multiple folders to be treated as one when resolving modules. */
     // "typeRoots": [],                                  /* Specify multiple folders that act like './node_modules/@types'. */
     // "types": [],                                      /* Specify type package names to be included without being referenced in a source file. */
@@ -106,6 +124,7 @@
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true /* Skip type checking all .d.ts files. */
   },
-  "exclude": ["node_modules", "src/test"],
-  "extends": "./tsconfig.paths.json"
+  "include": ["src", ".env", "test"],
+  // "extends": "./tsconfig.paths.json",
+  "exclude": ["node_modules"]
 }
