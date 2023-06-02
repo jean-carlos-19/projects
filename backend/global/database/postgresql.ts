@@ -1,11 +1,11 @@
 import { Client, ClientConfig } from "pg";
 
 const CONFIG_PG = Object.freeze<ClientConfig>({
-  host: process.env.HOST,
-  port: Number.parseInt(`${process.env.PORT}`),
-  database: process.env.DATABASE,
-  user: process.env.USER,
-  password: process.env.PASSWORD,
+  host: process.env.PG_HOST,
+  port: Number.parseInt(`${process.env.PG_PORT}`),
+  database: process.env.PG_DATABASE,
+  user: process.env.PG_USER,
+  password: process.env.PG_PASSWORD,
 });
 
 class Postgresql {
@@ -21,8 +21,10 @@ class Postgresql {
     return this.postgresql;
   }
 
-  public async connect(): Promise<Client> {
+  public async connect() {
     await this.client.connect();
+  }
+  public query(): Client {
     return this.client;
   }
 }
