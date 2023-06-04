@@ -1,0 +1,36 @@
+.search {
+  padding: 20px;
+  margin: 0 auto;
+  width: calc(100% - 20px);
+  @include display-flex(row, flex-start, center);
+  border-bottom: 0.5px solid var(--color-gray-100);
+
+  & > * + * {
+    margin-left: 32px;
+  }
+
+  .title {
+    flex: 1 25% 0;
+  }
+
+  section {
+    flex: 1 calc(100% - (40px - 25%)) 0;
+    padding: 8px 16px;
+    border-radius: 4px;
+    background-color: rgba(131, 126, 126, 0.1);
+    @include display-flex(row, flex-start, center);
+    & > * + * {
+      margin-left: 16px;
+    }
+    input {
+      flex: 1 calc(100% - (16px + 20px)) 0;
+      width: 100%;
+      background-color: transparent;
+      border: none;
+    }
+    svg {
+      flex-basis: 20px;
+      color: #9b9999;
+    }
+  }
+}

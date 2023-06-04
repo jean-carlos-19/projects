@@ -1,0 +1,42 @@
+/* Paleta de colores */
+@mixin colors {
+  --color-white-100: #ffffff;
+  --color-white-200: #f2f2f2;
+  --color-black-100: #000;
+  --color-black-200: #222733;
+  --color-blue-400: #2a3142;
+  --color-gray-100: #9b9999;
+}
+
+/* Level Titles */
+@mixin title-1 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+
+  /* identical to box height */
+  text-align: center;
+}
+@mixin title-2 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+}
+@mixin paragraph {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+}
+@mixin small-paragraph {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+}
