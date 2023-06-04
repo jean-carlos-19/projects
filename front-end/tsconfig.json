@@ -1,0 +1,44 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@project/presentation/component": ["./src/app/presentation/component"],
+      "@project/presentation/element": ["./src/app/presentation/element"],
+      "@project/presentation/design": ["./src/app/presentation/design"],
+
+      "@project/domain/service": ["./src/app/domain/service"],
+      "@project/domain/entity": ["./src/app/domain/entity"],
+      "@project/domain/dto": ["./src/app/domain/dto"],
+
+      "@project/infrastructure/http": ["./src/app/infrastructure/http"],
+      "@project/infrastructure/repository": [
+        "./src/app/infrastructure/repository"
+      ],
+
+      "@global/names/projects": ["./global/names.projects"],
+      "@global/states": ["./global/states"],
+
+      "@atomic/scss": ["./atomic/main.scss"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
+}
