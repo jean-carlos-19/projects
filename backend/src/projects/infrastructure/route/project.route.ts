@@ -17,5 +17,6 @@ const conntroller: Project_Controller = new Project_Controller(use_case);
 //Rutas
 
 ROUTE_PROJECT.post("/create", conntroller.crear);
+ROUTE_PROJECT.get("/search", conntroller.search);
 
 export { ROUTE_PROJECT };
