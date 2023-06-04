@@ -32,7 +32,7 @@
     "paths": {
       "global/database": ["./global/database"],
       "global/http": ["./global/http"],
-      
+
       "projects/domain/entity": ["./src/projects/domain/entity"],
       "projects/domain/error": ["./src/projects/domain/error"],
       "projects/domain/value": ["./src/projects/domain/value"],
