@@ -1,17 +1,18 @@
 import * as dotenv from "dotenv";
 dotenv.config();
 
-import { Postgresql } from "global/database";
+import { ROUTE_PROJECT } from "projects/infrastructure/route";
 import express, { Request, Response } from "express";
+import { Postgresql } from "global/database";
 import morgan from "morgan";
 import http from "http";
-import { ROUTE_PROJECT } from "projects/infrastructure/route";
-
+import {cors} from 'global/cors'
 const APP = express();
-const PORT: number = 3000;
+const PORT: number = 3001;
 
 APP.set("port", PORT);
 
+APP.use(cors);
 APP.use(express.urlencoded({ extended: true }));
 APP.use(express.json());
 APP.use(morgan("dev"));
