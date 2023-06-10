@@ -1,4 +1,4 @@
-import { Header, Search } from "@project/presentation/component";
+import { Footer, Header, Search } from "@project/presentation/component";
 import { Projects } from "@project/presentation/design";
 import "@atomic/scss";
 
@@ -8,6 +8,7 @@ export default function Home() {
       <Header />
       <Search />
       <Projects />
+      <Footer />
     </main>
   );
 }
