@@ -3,8 +3,10 @@ interface list_dto {
   description: string;
   conclusion: string;
   category: string;
+  tecnologies:string;
   url_image: string;
   url_demo: string;
   url_github: string;
+
 }
 export type { list_dto };
