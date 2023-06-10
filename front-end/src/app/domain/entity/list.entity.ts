@@ -3,6 +3,7 @@ interface List_Entity {
   description: string;
   conclusion: string;
   category: string;
+  tecnologies: string;
   url_image: string;
   url_demo: string;
   url_github: string;
