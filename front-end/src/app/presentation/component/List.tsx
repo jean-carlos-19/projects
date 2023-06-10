@@ -8,11 +8,12 @@ interface list_props {
 const List = (props: list_props) => {
   const { items, item_focus, return_item } = props;
   return (
-    <ul>
+    <ul className="list">
       {items.map((item: string, i: number) =>
         item_focus === item ? (
-          <li key={i}>
+          <li className="item" key={i}>
             <button
+              title={`Apps ${item}`}
               className="title-2 text-color-white-200 title__focus"
               onClick={() => return_item(item)}
             >
@@ -20,8 +21,9 @@ const List = (props: list_props) => {
             </button>
           </li>
         ) : (
-          <li key={i}>
+          <li className="item" key={i}>
             <button
+              title={`Apps ${item}`}
               className="title-2 text-color-white-200"
               onClick={() => return_item(item)}
             >

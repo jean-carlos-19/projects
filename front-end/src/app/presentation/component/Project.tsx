@@ -1,8 +1,8 @@
 import {
   Title_2,
   Paragraph,
-  Small_Paragraph,
 } from "@project/presentation/element";
+import { List } from "./List";
 interface project_props {
   url_image: string;
   title: string;
@@ -17,13 +17,7 @@ const Project = (props: project_props) => {
       <div className="content">
         <Title_2 css={"text-color-white-200"} name={title} />
         <Paragraph css={"text-color-white-200"} name={paragraph} />
-        <ul>
-          {tecnologies.map((tecnology: string) => (
-            <li className="bg-col-white-100">
-              <Small_Paragraph css={""} name={tecnology} />
-            </li>
-          ))}
-        </ul>
+        <List items={tecnologies} item_focus={""} return_item={()=>null} />
       </div>
     </section>
   );

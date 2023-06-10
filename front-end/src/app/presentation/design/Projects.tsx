@@ -3,9 +3,11 @@ import { NAMES_PROJECTS } from "@global/names/projects";
 import { List, Loading, Project } from "@project/presentation/component";
 import { useLoading } from "@global/states";
 import { useProjects } from "./hooks";
+import { List_Entity } from "@project/domain/entity";
+
 const Projects = () => {
   const { loading, set_loading } = useLoading();
-  const { name, name_projects, get_location } = useProjects();
+  const { name, projects, name_projects, get_location } = useProjects(set_loading);
   return (
     <div className="projects">
       <List
@@ -18,18 +20,43 @@ const Projects = () => {
       ) : (
         <div className="body">
           {name === NAMES_PROJECTS.WEB ? (
-            <Project
-              url_image={
-                "https://images.unsplash.com/photo-1682687218904-de46ed992b58?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=943&q=80"
-              }
-              title={"my title"}
-              paragraph={
-                "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati exercitationem saepe facere dolorum suscipit, odio aspernatur deserunt eveniet dolore eius iusto tempora corrupti veniam! Facilis quidem voluptatum autem quis ad voluptatem quibusdam consequuntur possimus perferendis impedit obcaecati delectus rerum quam officia pariatur, incidunt qui natus eveniet sit ipsa velit exercitationem."
-              }
-              tecnologies={["Typescript", "Expo"]}
+            projects.map((project:List_Entity)=>(
+              <Project
+              url_image={project.url_image}
+              title={project.title}
+              paragraph={project.description}
+              tecnologies={project.tecnologies.split(',')}
             />
-          ) : name === NAMES_PROJECTS.MOBILE ? null : name ===
-            NAMES_PROJECTS.SERVER ? null : null}
+            ))
+          ) : name === NAMES_PROJECTS.MOBILE ? (
+            projects.map((project:List_Entity)=>(
+              <Project
+              url_image={project.url_image}
+              title={project.title}
+              paragraph={project.description}
+              tecnologies={project.tecnologies.split(',')}
+            />
+            ))
+          ) : name ===
+            NAMES_PROJECTS.SERVER ? (
+              projects.map((project:List_Entity)=>(
+                <Project
+                url_image={project.url_image}
+                title={project.title}
+                paragraph={project.description}
+                tecnologies={project.tecnologies.split(',')}
+              />
+              ))
+            ) : (
+              projects.map((project:List_Entity)=>(
+                <Project
+                url_image={project.url_image}
+                title={project.title}
+                paragraph={project.description}
+                tecnologies={project.tecnologies.split(',')}
+              />
+              ))
+            )}
         </div>
       )}
     </div>
