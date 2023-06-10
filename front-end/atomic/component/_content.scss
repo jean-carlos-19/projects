@@ -1,0 +1,27 @@
+.content {
+    padding: 0 1rem 1rem;
+
+    & > * + * {
+      margin-top: 10px;
+    }
+
+    p {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    .list{
+        height:80px; 
+        @include display-flex(row,space-between,center);
+        flex-wrap: wrap;
+        align-content: space-between;
+        .item{
+            border-radius: .5rem;
+            background-color: var(--color-white-100);
+           button{
+            color: var(--color-black-200);
+            font-weight: bold !important;
+           }
+        }
+    }
+  }

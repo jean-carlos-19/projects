@@ -7,23 +7,9 @@
     margin-top: 1.5rem;
   }
 
-  ul {
-    @include display-flex(row, space-between, center);
-
-    button {
-      border: none;
-      background-color: transparent;
-      padding: 0.5rem 1rem;
-
-      &.title-2 {
-        font-weight: normal;
-
-        &.title__focus {
-          background-color: rgba(131, 126, 126, 0.228);
-          border-radius: 5px;
-          font-weight: 600;
-        }
-      }
-    }
+  .body{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px,1fr));  
+    grid-gap: 2rem;
   }
 }
