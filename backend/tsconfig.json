@@ -32,6 +32,7 @@
     "paths": {
       "global/database": ["./global/database"],
       "global/http": ["./global/http"],
+      "global/cors":["./global/cors"],
 
       "projects/domain/entity": ["./src/projects/domain/entity"],
       "projects/domain/error": ["./src/projects/domain/error"],
