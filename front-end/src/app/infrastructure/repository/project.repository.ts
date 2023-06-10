@@ -1,7 +1,8 @@
+import { search_dto } from "@project/domain/dto";
 import { List_Entity } from "@project/domain/entity";
 import { Project_Service } from "@project/domain/service";
-import { AxiosResponse } from "axios";
 import { Http } from "@project/infrastructure/http";
+import { AxiosResponse } from "axios";
 
 class Project_Repository implements Project_Service {
   private static project_repository: Project_Repository;
@@ -12,9 +13,9 @@ class Project_Repository implements Project_Service {
       this.project_repository = new Project_Repository();
     return this.project_repository;
   }
-  public async list(): Promise<AxiosResponse<List_Entity>> {
-    return await this.http.get<List_Entity>(
-      `${process.env.REACT_URL_API}/project/list`,
+  public async search(name_category:string): Promise<AxiosResponse<search_dto>> {
+    return await this.http.get<search_dto>(
+      `http://192.168.100.7:3001/project/search?category=${name_category}`,
       this.http.header_get()
     );
   }
