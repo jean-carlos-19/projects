@@ -22,6 +22,7 @@ class Postgresql_Repository implements Project_Service {
       title,
       description,
       conclusion,
+      tecnologies,
       category,
       url_demo,
       url_github,
@@ -33,6 +34,7 @@ class Postgresql_Repository implements Project_Service {
             '${description}',
             '${conclusion}',
             '${category}',
+            '${tecnologies}',
             '${url_demo}',
             '${url_github}',
             '${url_image}'
