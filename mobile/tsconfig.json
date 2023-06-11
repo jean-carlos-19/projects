@@ -4,7 +4,11 @@
     "paths": {
       "project/domain/entity":["./src/project/domain/entity"],
       "project/domain/dto":["./src/project/domain/dto"],
-      "project/domain/service":["./src/project/domain/service"]
+      "project/domain/service":["./src/project/domain/service"],
+
+      "prject/infrastructure/http":["./src/project/infrastructure/http"],
+      "prject/infrastructure/repository":["./src/project/infrastructure/repository"],
+
     },
     "strict": true
   }
