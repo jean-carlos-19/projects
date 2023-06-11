@@ -6,8 +6,8 @@
       "project/domain/dto":["./src/project/domain/dto"],
       "project/domain/service":["./src/project/domain/service"],
 
-      "prject/infrastructure/http":["./src/project/infrastructure/http"],
-      "prject/infrastructure/repository":["./src/project/infrastructure/repository"],
+      "project/infrastructure/http":["./src/project/infrastructure/http"],
+      "project/infrastructure/repository":["./src/project/infrastructure/repository"],
 
     },
     "strict": true
