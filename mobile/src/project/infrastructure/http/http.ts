@@ -14,7 +14,7 @@ class Http{
       ): Promise<AxiosResponse<T>> => {
         return await axios.get(url, header);
       };
-      public header_get() {
+      public header() {
         return {
           "Content-Type": "application/x-www-form-urlencoded",
           Origin: `${process.env.REACT_URL_LOCAL}`,
