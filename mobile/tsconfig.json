@@ -15,8 +15,7 @@
       "project/infrastructure/http":["./src/project/infrastructure/http"],
       "project/infrastructure/repository":["./src/project/infrastructure/repository"],
 
-      "project/presentation":["./src/project/presentation/Route.tsx"],
-
+      "project/presentation":["./src/project/presentation/Route.tsx"]
     },
     "strict": true
   }
