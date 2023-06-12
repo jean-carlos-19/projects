@@ -1,6 +1,7 @@
 import React from 'react'
-import { NativeSyntheticEvent, TextInputChangeEventData, TextInputFocusEventData, View } from 'react-native'
-import { Tittle_1,Text_Small, Input_Text } from 'global/atomic/element'
+import { View } from 'react-native'
+import { Label,Text_Small, Input_Text } from 'global/atomic/element'
+import {field_styles} from './style/field.styles'
 
 interface field_props{
     title:string;
@@ -14,24 +15,25 @@ interface field_props{
     
     max_length:number;
 }
-const Filed_Text = (props:field_props) => {
+const Field_Text = (props:field_props) => {
     const {title,sms_error,value,placeholder,editable,handleChange,handleBlur,max_length} = props;
-  return (
-    <View>
+    return (
+    <View style={field_styles.container}>
       <View>
-        <Tittle_1 text={title} />
+        <Label style={field_styles.title} text={title} />
         <Text_Small text={sms_error} />
       </View>
       <Input_Text 
+        backgroundColor={field_styles.field}
         placeholder={placeholder} 
         value={value} 
         editable={editable} 
         handleChange={handleChange} 
         handleBlur={handleBlur}      
         />
-      <Text_Small text={`0 / ${max_length}`} />
+      <Text_Small style={field_styles.sms_error} text={`${value} / ${max_length}`} />
     </View>
   )
 }
 
-export {Filed_Text}
+export {Field_Text}
