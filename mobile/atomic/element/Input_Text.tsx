@@ -1,9 +1,15 @@
 import React from 'react'
 import { TextInput } from 'react-native'
 
-const Input_Text = () => {
+interface input_props{
+  placeholder:string;
+}
+const Input_Text = (props:input_props) => {
+  const {placeholder} = props;
   return (
-    <TextInput />
+    <TextInput 
+      placeholder={placeholder}
+    />
   )
 }
 
