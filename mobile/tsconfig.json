@@ -2,6 +2,7 @@
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
     "paths": {
+      "global/atomic/element":["./atomic/element"],
       "project/domain/entity":["./src/project/domain/entity"],
       "project/domain/dto":["./src/project/domain/dto"],
       "project/domain/service":["./src/project/domain/service"],
