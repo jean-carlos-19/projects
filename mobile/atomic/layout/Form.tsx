@@ -18,8 +18,9 @@ const Form = (props:form_props) => {
         (props)=>{
             const {values,handleChange,handleBlur} = props;
             return (      
-                Object.keys(values).map((prop:string)=>(
+                Object.keys(values).map((prop:string,i:number)=>(
                     <Filed_Text 
+                    key={i}
                     title={`${values[prop]}`} 
                     sms_error={''} 
                     value={values[prop]} 
