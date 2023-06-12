@@ -1,14 +1,15 @@
 import React from 'react'
-import { Text } from 'react-native'
+import { StyleProp, Text, TextStyle } from 'react-native'
 
 interface text_small_props{
     text:string;
+    style?:StyleProp<TextStyle>;
 }
 
 const Text_Small = (props:text_small_props) => {
-    const {text} = props;
+    const {text,style} = props;
   return (
-    <Text>
+    <Text style={[style]}>
       {text}
     </Text>
   )

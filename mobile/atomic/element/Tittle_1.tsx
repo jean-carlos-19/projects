@@ -1,13 +1,14 @@
 import React from 'react'
-import { Text } from 'react-native'
-
+import { StyleProp, Text, TextStyle } from 'react-native'
+import {styles} from './style/styles'
 interface title_1_props{
     text:string;
+    style?:StyleProp<TextStyle>;
 }
 const Tittle_1 = (props:title_1_props) => {
-    const {text} = props;
+    const {text,style} = props;
   return (
-    <Text>
+    <Text style={[style, styles.title]}>
         {text}
     </Text>
   )

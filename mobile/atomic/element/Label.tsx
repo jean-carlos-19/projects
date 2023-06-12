@@ -1,15 +1,16 @@
 import React from 'react'
-import { Text } from 'react-native'
+import { StyleProp, Text, TextStyle } from 'react-native'
 
 
 interface label_props{
     text:string;
+    style?:StyleProp<TextStyle>;
 }
 
 const Label = (props:label_props) => {
-    const {text} = props;
+    const {text,style} = props;
   return (
-    <Text>
+    <Text style={style}>
       {text}
     </Text>
   )
