@@ -6,7 +6,7 @@ interface input_props{
   placeholder:string;
   editable:boolean;
   backgroundColor:StyleProp<TextStyle>;
-  handleChange:((e: NativeSyntheticEvent<TextInputChangeEventData>) => void) | undefined
+  handleChange:(((text: string) => void) | undefined);
   handleBlur:((e: NativeSyntheticEvent<TextInputFocusEventData>) => void) | undefined;
 }
 const Input_Text = (props:input_props) => {
@@ -17,7 +17,7 @@ const Input_Text = (props:input_props) => {
       placeholder={placeholder}
       value={value}
       editable={editable}
-      onChange={handleChange}
+      onChangeText={handleChange}
       onBlur={handleBlur}
     />
   )
