@@ -1,6 +1,6 @@
 import React from 'react'
 import {Formik} from 'formik'
-import { Filed_Text } from 'global/atomic/component';
+import { Field_Text } from 'global/atomic/component';
 
 interface form_props{
     initialValues:any
@@ -9,6 +9,7 @@ const Form = (props:form_props) => {
     const {initialValues} = props;
   return (
     <Formik
+        validateOnMount={true}
         initialValues={initialValues}
         onSubmit={(values,actions)=>{
             console.log(values)
@@ -18,19 +19,22 @@ const Form = (props:form_props) => {
         (props)=>{
             const {values,handleChange,handleBlur} = props;
             return (      
-                Object.keys(values).map((prop:string,i:number)=>(
-                    <Filed_Text 
-                    key={i}
-                    title={`${values[prop]}`} 
-                    sms_error={''} 
-                    value={values[prop]} 
-                    placeholder={`${values[prop]}`} 
-                    editable={true} 
-                    handleChange={handleChange(`${values[prop]}`)} 
-                    handleBlur={handleBlur(`${values[prop]}`)} 
-                    max_length={0} 
-                    />
-                ))
+                Object.keys(initialValues).map((prop:string,i:number)=>{
+                    console.log(values.title)
+                    return(
+                        <Field_Text 
+                            key={i}
+                            title={`${prop.toLocaleLowerCase()}`} 
+                            sms_error={''} 
+                            value={values[prop]} 
+                            placeholder={`${prop.toLocaleLowerCase()}`} 
+                            editable={true} 
+                            handleChange={handleChange(`${prop}`)} 
+                            handleBlur={handleBlur(`${prop}`)} 
+                            max_length={25} 
+                        />
+                    )
+                })
             )
         }
      }
