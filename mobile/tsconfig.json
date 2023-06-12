@@ -5,6 +5,7 @@
     "paths": {
       "global/atomic/element":["./atomic/element"],
       "global/atomic/component":["./atomic/component"],
+      "global/atomic/abstract":["./atomic/abstract"],
       "global/atomic/layout":["./atomic/layout"],
 
       "project/domain/entity":["./src/project/domain/entity"],
