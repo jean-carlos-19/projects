@@ -3,6 +3,8 @@
   "compilerOptions": {
     "paths": {
       "global/atomic/element":["./atomic/element"],
+      "global/atomic/component":["./atomic/component"],
+
       "project/domain/entity":["./src/project/domain/entity"],
       "project/domain/dto":["./src/project/domain/dto"],
       "project/domain/service":["./src/project/domain/service"],

@@ -1,6 +1,6 @@
 import React from 'react'
 import {Formik} from 'formik'
-import { Filed_Text } from '../component';
+import { Filed_Text } from 'global/atomic/component';
 
 interface form_props{
     initialValues:any
