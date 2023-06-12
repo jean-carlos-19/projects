@@ -9,8 +9,8 @@ interface field_props{
     value:any;
     placeholder:string;
     editable:boolean;
-    handleChange:((e: NativeSyntheticEvent<TextInputChangeEventData>) => void) | undefined
-    handleBlur:((e: NativeSyntheticEvent<TextInputFocusEventData>) => void) | undefined;
+    handleChange:(field: any) => void | ((e: string | React.ChangeEvent<any>) => void)
+    handleBlur:(field: any) => void | ((e: string | React.ChangeEvent<any>) => void)
     
     max_length:number;
 }
