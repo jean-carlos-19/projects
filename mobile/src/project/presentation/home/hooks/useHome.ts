@@ -1,0 +1,6 @@
+
+const useHome =()=>{
+
+};
+
+export {useHome}
