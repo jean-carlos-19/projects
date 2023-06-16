@@ -1,0 +1,1 @@
+export {useStateGlobal} from "./state.component";
