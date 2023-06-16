@@ -6,13 +6,15 @@ import { Form } from "global/atomic/layout";
 import { validation, MAX_VALUE } from "./validation";
 import { styles } from "./style/styles";
 import { useHome, useProgressBar } from "./hooks";
+import {useStateGlobal} from 'global/state'
 
 const Home = () => {
-  const { initialValues, create_project } = useHome();
+  const {set_error,loading, set_loading,set_message} = useStateGlobal();
+  const { initialValues, create_project } = useHome(set_loading,set_error,set_message);
   const { items, position, position_location } = useProgressBar(2);
   return (
     <ScrollView style={styles.scroll}>
-      
+      <Loading message="Subiendo el proyecto" state={loading} />
       <View style={styles.container}>
         <Tittle_1 text={"Create your first projects"} />
         <Progress_Bar
