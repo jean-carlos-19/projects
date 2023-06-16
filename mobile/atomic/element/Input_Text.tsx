@@ -13,6 +13,7 @@ const Input_Text = (props:input_props) => {
   const {placeholder,editable,value,backgroundColor,handleBlur,handleChange} = props;
   return (
     <TextInput 
+      placeholderTextColor={"#9B9999"}
       style={[backgroundColor,styles.input]}
       placeholder={placeholder}
       value={value}

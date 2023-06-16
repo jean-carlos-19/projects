@@ -8,7 +8,6 @@ const field_styles =  StyleSheet.create({
         flexDirection:"column",
         alignItems:"flex-start",
         justifyContent:"space-between",
-        marginTop:RFValue(24)
     },
     header:{
         width:"100%",

@@ -8,6 +8,7 @@ module.exports = function(api) {
         {
           'root':["."],
           'alias':{
+              "global/state":"./global/state",
               'global/atomic/element':'./atomic/element',
               'global/atomic/component':'./atomic/component',
               'global/atomic/layout':'./atomic/layout',

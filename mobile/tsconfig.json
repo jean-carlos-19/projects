@@ -3,6 +3,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
+      "global/state":["./global/state"],
       "global/atomic/element":["./atomic/element"],
       "global/atomic/component":["./atomic/component"],
       "global/atomic/abstract":["./atomic/abstract"],

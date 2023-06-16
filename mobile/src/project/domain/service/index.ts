@@ -1,1 +1,1 @@
-export type {project_service} from "./project.service";
+export type { project_service } from "./project.service";
