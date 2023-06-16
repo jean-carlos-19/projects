@@ -11,7 +11,11 @@ const values_project: Create_Entity = {
   url_image: "",
 };
 
-const useHome = () => {
+const useHome = (
+  set_loading:(state:boolean)=>void,
+  set_error:(sms:string)=>void,
+  set_message:(sms:string)=>void,
+) => {
   const [initialValues] = useState(values_project);
   const create_project = useCallback((datos: Create_Entity) => {
     console.log(datos);
