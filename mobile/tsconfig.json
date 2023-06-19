@@ -19,5 +19,6 @@
       "project/presentation":["./src/project/presentation/Route.tsx"]
     },
     "strict": true
-  }
+  },
+  "typeRoots": ["./types"]
 }
