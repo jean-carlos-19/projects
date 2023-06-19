@@ -23,6 +23,13 @@ module.exports = function(api) {
               'project/presentation':'./src/project/presentation/Route.tsx',
           }
         }
+      ],
+      [
+        "module:react-native-dotenv",
+        {
+         'moduleName':'@env',
+         'path':'.env',
+        }
       ]
     ]
   };
