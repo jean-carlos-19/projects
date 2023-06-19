@@ -11,7 +11,7 @@ class Project_Repository implements project_service {
   public create = async (
     project: Create_Entity
   ): Promise<AxiosResponse<create_dto, any>> => {
-    return await this.http.post("", project, this.http.header());
+    return await this.http.post("http://192.168.100.7:3001/project/create", project, this.http.header());
   };
 
   private constructor() {}
