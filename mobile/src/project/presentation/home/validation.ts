@@ -19,7 +19,7 @@ const CATEGORIES = Object.freeze({
   SERVER: "Server",
   SQL: "Sql",
 });
-const validation:ObjectSchema<Create_Entity> = object({
+const validation: ObjectSchema<Create_Entity> = object({
   title: string()
     .required("title is a required field")
     .max(MAX_VALUE.title, "value exceeded"),

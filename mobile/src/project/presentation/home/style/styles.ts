@@ -5,7 +5,7 @@ const { width, height } = Dimensions.get("window");
 const styles = StyleSheet.create({
   scroll: {
     width: width,
-    height: height ,
+    height: height,
   },
   container: {
     width: width,

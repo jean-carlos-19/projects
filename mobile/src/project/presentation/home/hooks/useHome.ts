@@ -30,9 +30,9 @@ const useHome = (
         datos
       );
       const { id_response, message_response } = respuesta.data;
-      set_message(message_response)
+      set_message(message_response);
     } catch (error) {
-      set_error('Error en el servidor al crear el proyecto')
+      set_error("Error en el servidor al crear el proyecto");
     }
     set_loading(false);
   }, []);

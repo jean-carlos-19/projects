@@ -1,7 +1,7 @@
 import React from "react";
-import { View, ScrollView,StatusBar } from "react-native";
+import { View, ScrollView, StatusBar } from "react-native";
 import { Tittle_1 } from "global/atomic/element";
-import { Progress_Bar, Loading,Modal } from "global/atomic/component";
+import { Progress_Bar, Loading, Modal } from "global/atomic/component";
 import { Form } from "global/atomic/layout";
 import { validation, MAX_VALUE } from "./validation";
 import { styles } from "./style/styles";
@@ -9,7 +9,15 @@ import { useHome, useProgressBar } from "./hooks";
 import { useStateGlobal } from "global/state";
 
 const Home = () => {
-  const {error, set_error, loading, set_loading, message,set_message,hidden_menssage } = useStateGlobal();
+  const {
+    error,
+    set_error,
+    loading,
+    set_loading,
+    message,
+    set_message,
+    hidden_menssage,
+  } = useStateGlobal();
   const { initialValues, create_project } = useHome(
     set_loading,
     set_error,
