@@ -1,4 +1,5 @@
-import { object, string } from "yup";
+import { Create_Entity } from "project/domain/entity";
+import { ObjectSchema, object, string } from "yup";
 
 const MAX_VALUE = Object.freeze({
   title: 50,
@@ -18,7 +19,7 @@ const CATEGORIES = Object.freeze({
   SERVER: "Server",
   SQL: "Sql",
 });
-const validation = object({
+const validation:ObjectSchema<Create_Entity> = object({
   title: string()
     .required("title is a required field")
     .max(MAX_VALUE.title, "value exceeded"),
@@ -33,7 +34,7 @@ const validation = object({
     .max(MAX_VALUE.category, "value exceeded")
     .test("category error ", "invalid entry", (value) => {
       return value === CATEGORIES.WEB ||
-        value === CATEGORIES.WEB ||
+        value === CATEGORIES.MOBILE ||
         value === CATEGORIES.SERVER ||
         value === CATEGORIES.SQL
         ? true
