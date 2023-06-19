@@ -3,6 +3,7 @@
 Create useful .gitignore files for your project
 
 /*.log
+/*.env
 # Logs
 /backend/logs
 /backend/*.log
