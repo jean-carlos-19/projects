@@ -1,19 +1,16 @@
-import { COLORS } from "global/atomic/abstract";
 import { StyleSheet, Dimensions } from "react-native";
 import Constants from "expo-constants";
 import { RFValue } from "react-native-responsive-fontsize";
-
-const { width, height } = Dimensions.get("screen");
+const { width, height } = Dimensions.get("window");
 const styles = StyleSheet.create({
   scroll: {
     width: width,
-    height: height,
+    height: height ,
   },
   container: {
     width: width,
     height: height,
     backgroundColor: "#0F172A",
-    paddingTop: Constants.statusBarHeight + RFValue(17),
     paddingEnd: RFValue(17),
     paddingHorizontal: RFValue(16),
     flex: 1,
