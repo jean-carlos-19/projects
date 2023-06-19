@@ -2,6 +2,7 @@
 .gitignore generator
 Create useful .gitignore files for your project
 
+/*.log
 # Logs
 /backend/logs
 /backend/*.log
