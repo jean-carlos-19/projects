@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import {
   Title_2,
   Paragraph,
@@ -13,7 +14,7 @@ const Project = (props: project_props) => {
   const { title, url_image, paragraph, tecnologies } = props;
   return (
     <section className="project bg-col-black-200">
-      <img src={url_image} alt="" />
+    <img src={url_image} alt={'Imagen de portada'} />
       <div className="content">
         <Title_2 css={"text-color-white-200"} name={title} />
         <Paragraph css={"text-color-white-200"} name={paragraph} />
