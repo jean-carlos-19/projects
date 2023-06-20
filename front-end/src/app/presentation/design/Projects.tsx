@@ -18,8 +18,9 @@ const Projects = () => {
       <Loading state={loading} />
       <div className="body">
         {name === NAMES_PROJECTS.WEB ? (
-          projects.map((project:List_Entity)=>(
+          projects.map((project:List_Entity,i:number)=>(
             <Project
+            key={i}
             url_image={project.url_image}
             title={project.title}
             paragraph={project.description}
@@ -27,8 +28,9 @@ const Projects = () => {
           />
           ))
         ) : name === NAMES_PROJECTS.MOBILE ? (
-          projects.map((project:List_Entity)=>(
+          projects.map((project:List_Entity,i:number)=>(
             <Project
+            key={i}
             url_image={project.url_image}
             title={project.title}
             paragraph={project.description}
@@ -37,8 +39,9 @@ const Projects = () => {
           ))
         ) : name ===
           NAMES_PROJECTS.SERVER ? (
-            projects.map((project:List_Entity)=>(
+            projects.map((project:List_Entity,i:number)=>(
               <Project
+              key={i}
               url_image={project.url_image}
               title={project.title}
               paragraph={project.description}
@@ -46,8 +49,9 @@ const Projects = () => {
             />
             ))
           ) : (
-            projects.map((project:List_Entity)=>(
+            projects.map((project:List_Entity,i:number)=>(
               <Project
+              key={i}
               url_image={project.url_image}
               title={project.title}
               paragraph={project.description}
