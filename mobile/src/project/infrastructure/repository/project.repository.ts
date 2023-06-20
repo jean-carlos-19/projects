@@ -3,7 +3,7 @@ import { Create_Entity } from "project/domain/entity";
 import { Http } from "project/infrastructure/http";
 import { create_dto } from "project/domain/dto";
 import { AxiosResponse } from "axios";
-import {API_URL} from '@env'
+import {API_URL_REMOTE} from '@env'
 
 
 class Project_Repository implements project_service {
@@ -14,7 +14,7 @@ class Project_Repository implements project_service {
     project: Create_Entity
   ): Promise<AxiosResponse<create_dto, any>> => {
     return await this.http.post(
-      `${API_URL}/project/create`,
+      `${API_URL_REMOTE}/project/create`,
       project,
       this.http.header()
     );
