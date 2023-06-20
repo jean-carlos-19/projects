@@ -1,11 +1,12 @@
 import { Client, ClientConfig } from "pg";
 
 const CONFIG_PG = Object.freeze<ClientConfig>({
-  host: process.env.PG_HOST,
-  port: Number.parseInt(`${process.env.PG_PORT}`),
-  database: process.env.PG_DATABASE,
-  user: process.env.PG_USER,
-  password: process.env.PG_PASSWORD,
+  host: process.env.PG_HOST_REMOTE,
+  port: Number.parseInt(`${process.env.PG_PORT_REMOTE}`),
+  database: process.env.PG_DATABASE_REMOTE,
+  user: process.env.PG_USER_REMOTE,
+  password: process.env.PG_PASSWORD_REMOTE,
+  ssl:true
 });
 
 class Postgresql {
