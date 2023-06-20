@@ -1,7 +1,11 @@
 import React from "react";
 
-function Loading() {
-  return <span className="loader"></span>;
+interface loading_props{
+  state:boolean;
+}
+function Loading(props:loading_props) {
+  const {state} = props;
+  return state ? <span className="loader"></span>: null;
 }
 
 export { Loading };
