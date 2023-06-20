@@ -15,11 +15,28 @@ const Projects = () => {
         return_item={get_location}
         item_focus={name}
       />
-      {loading ? (
-        <Loading />
-      ) : (
-        <div className="body">
-          {name === NAMES_PROJECTS.WEB ? (
+      <Loading state={loading} />
+      <div className="body">
+        {name === NAMES_PROJECTS.WEB ? (
+          projects.map((project:List_Entity)=>(
+            <Project
+            url_image={project.url_image}
+            title={project.title}
+            paragraph={project.description}
+            tecnologies={project.tecnologies.split(',')}
+          />
+          ))
+        ) : name === NAMES_PROJECTS.MOBILE ? (
+          projects.map((project:List_Entity)=>(
+            <Project
+            url_image={project.url_image}
+            title={project.title}
+            paragraph={project.description}
+            tecnologies={project.tecnologies.split(',')}
+          />
+          ))
+        ) : name ===
+          NAMES_PROJECTS.SERVER ? (
             projects.map((project:List_Entity)=>(
               <Project
               url_image={project.url_image}
@@ -28,7 +45,7 @@ const Projects = () => {
               tecnologies={project.tecnologies.split(',')}
             />
             ))
-          ) : name === NAMES_PROJECTS.MOBILE ? (
+          ) : (
             projects.map((project:List_Entity)=>(
               <Project
               url_image={project.url_image}
@@ -37,28 +54,8 @@ const Projects = () => {
               tecnologies={project.tecnologies.split(',')}
             />
             ))
-          ) : name ===
-            NAMES_PROJECTS.SERVER ? (
-              projects.map((project:List_Entity)=>(
-                <Project
-                url_image={project.url_image}
-                title={project.title}
-                paragraph={project.description}
-                tecnologies={project.tecnologies.split(',')}
-              />
-              ))
-            ) : (
-              projects.map((project:List_Entity)=>(
-                <Project
-                url_image={project.url_image}
-                title={project.title}
-                paragraph={project.description}
-                tecnologies={project.tecnologies.split(',')}
-              />
-              ))
-            )}
-        </div>
-      )}
+          )}
+      </div>
     </div>
   );
 };
