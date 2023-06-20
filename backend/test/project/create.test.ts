@@ -19,7 +19,7 @@ test("create an project ", async () => {
     category: "Web",
     conclusion: "dfkldskdlsj",
     description: "dkfdsfdkld",
-    tecnologies:'ts,expo,js',
+    tecnologies: "ts,expo,js",
     url_demo: "dsfds",
     url_github: "dsfsdfs",
     url_image: "dsfdfdd",

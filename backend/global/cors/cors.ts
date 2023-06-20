@@ -1,5 +1,5 @@
-import Cors from 'cors'
+import Cors from "cors";
 const cors = Cors({
-    origin:"*"
+  origin: "*",
 });
-export {cors}
+export { cors };

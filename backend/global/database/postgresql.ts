@@ -6,7 +6,7 @@ const CONFIG_PG = Object.freeze<ClientConfig>({
   database: process.env.PG_DATABASE_REMOTE,
   user: process.env.PG_USER_REMOTE,
   password: process.env.PG_PASSWORD_REMOTE,
-  ssl:true
+  ssl: true,
 });
 
 class Postgresql {

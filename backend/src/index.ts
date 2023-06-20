@@ -6,7 +6,7 @@ import express, { Request, Response } from "express";
 import { Postgresql } from "global/database";
 import morgan from "morgan";
 import http from "http";
-import {cors} from 'global/cors'
+import { cors } from "global/cors";
 const APP = express();
 const PORT: number = 3001;
 
