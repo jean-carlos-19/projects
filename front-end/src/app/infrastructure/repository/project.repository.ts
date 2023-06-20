@@ -15,7 +15,7 @@ class Project_Repository implements Project_Service {
   }
   public async search(name_category:string): Promise<AxiosResponse<search_dto>> {
     return await this.http.get<search_dto>(
-      `http://192.168.100.7:3001/project/search?category=${name_category}`,
+      `${process.env.REACT_URL_API}/project/search?category=${name_category}`,
       this.http.header_get()
     );
   }
