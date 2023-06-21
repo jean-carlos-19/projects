@@ -20,6 +20,7 @@
 - [Typescript](https://www.typescriptlang.org/)
 - [Yup](https://github.com/jquense/yup)
 - [Formik](https://formik.org/)
+- [Scss](https://sass-lang.com/guide)
 
 ## How To Use
 
@@ -32,7 +33,7 @@ To clone and run this application, you'll need [Git](https://git-scm.com) and [N
 $ git clone https://github.com/jean-carlos-19/projects
 
 # Access to the frontend folder
-$ cd frontend
+$ cd front-end
 
 # Install dependencies
 $ yarn install
