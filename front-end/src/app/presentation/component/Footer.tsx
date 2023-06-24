@@ -1,29 +1,29 @@
 import React from "react";
-import { Title_1, Small_Paragraph } from "@project/presentation/element";
+import { Title_2, Paragraph } from "@project/presentation/element";
 
 const Footer = () => {
   return (
     <footer className="footer bg-col-black-200">
       <section className="social-media">
         <header>
-          <Title_1 css={"text-color-white-200 "} name={"Social Medila"} />
+          <Title_2 css={"text-color-white-200 "} name={"Social Medila"} />
         </header>
         <ul className="list">
           <li>
-            <Small_Paragraph css={"text-color-white-200"} name={"Instgram"} />
+            <Paragraph css={"text-color-white-200"} name={"Instgram"} />
           </li>
           <li>
-            <Small_Paragraph css={"text-color-white-200"} name={"Linkedin"} />
+            <Paragraph css={"text-color-white-200"} name={"Linkedin"} />
           </li>
           <li>
-            <Small_Paragraph css={"text-color-white-200"} name={"Githubº"} />
+            <Paragraph css={"text-color-white-200"} name={"Githubº"} />
           </li>
         </ul>
       </section>
-      <section className="owner">
-        <Title_1 css={"text-color-white-200"} name={"{};"} />
-        <Title_1 css={"text-color-white-200"} name={"PiguaveSoft"} />
-      </section>
+      <div className="owner">
+        <Title_2 css={"text-color-white-200"} name={"{};"} />
+        <Title_2 css={"text-color-white-200"} name={"PiguaveSoft"} />
+      </div>
     </footer>
   );
 };
