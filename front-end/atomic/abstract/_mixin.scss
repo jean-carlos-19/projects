@@ -12,3 +12,10 @@
   }
   
 }
+@mixin margin-top-global($size) {
+  
+  & > * + *{
+    margin-top: $size;
+  }
+  
+}
