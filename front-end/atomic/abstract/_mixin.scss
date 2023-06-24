@@ -5,6 +5,10 @@
   justify-content: $main-axis;
 }
 @mixin font-sizes($font-size, $line-heiht) {
-  font-size: $font-size;
-  line-height: $line-heiht;
+
+  @media screen and (min-width:50rem) {
+    font-size: $font-size;
+    line-height: $line-heiht;
+  }
+  
 }
