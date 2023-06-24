@@ -1,24 +1,24 @@
-.footer{
-    position: sticky;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    padding: 1rem;
-    @include display-flex(row,space-between,center);
-    .social-media{
-        &>*+*{
-            margin-top: 1.5rem;
-        }
-        .list{
-            @include display-flex(column,center,flex-start);
-            &>*+*{
-                margin-top: .75rem;
-            }
-        }
+.footer {
+  position: sticky;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+  @include display-flex(row, space-between, center);
+  .social-media {
+    & > * + * {
+      margin-top: 1.5rem;
     }
-    .owner{
-        h1{
-            transform: rotate(-25deg); 
-        }
+    .list {
+      @include display-flex(column, center, flex-start);
+      & > * + * {
+        margin-top: 0.75rem;
+      }
     }
+  }
+  .owner {
+    h1 {
+      transform: rotate(-25deg);
+    }
+  }
 }

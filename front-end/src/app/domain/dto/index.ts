@@ -1,1 +1,1 @@
-export type {search_dto} from "./search.dto";
+export type { search_dto } from "./search.dto";

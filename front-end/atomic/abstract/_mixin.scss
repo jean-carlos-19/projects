@@ -4,3 +4,7 @@
   align-items: $secondary-axis;
   justify-content: $main-axis;
 }
+@mixin font-sizes($font-size, $line-heiht) {
+  font-size: $font-size;
+  line-height: $line-heiht;
+}

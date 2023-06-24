@@ -2,7 +2,6 @@
 
 <h1 align="center">Front-End</h1>
 
-
 <!-- TABLE OF CONTENTS -->
 
 ## Table of Contents
@@ -10,7 +9,6 @@
 - [Built With](#built-with)
 - [How to use](#how-to-use)
 - [Contact](#contact)
-
 
 ### Built With
 

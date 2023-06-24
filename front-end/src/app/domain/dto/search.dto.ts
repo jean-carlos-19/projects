@@ -1,6 +1,6 @@
 import { List_Entity } from "../entity";
 
-interface search_dto{
-    data:List_Entity[]
+interface search_dto {
+  data: List_Entity[];
 }
-export type {search_dto}
+export type { search_dto };
