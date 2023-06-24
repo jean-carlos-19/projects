@@ -1,6 +1,6 @@
 import React from "react";
-import { Title_2, Paragraph } from "@project/presentation/element";
-
+import { Title_2 } from "@project/presentation/element";
+import { Social_Media } from '@project/presentation/component'
 const Footer = () => {
   return (
     <footer className="footer bg-col-black-200">
@@ -8,17 +8,7 @@ const Footer = () => {
         <header>
           <Title_2 css={"text-color-white-200 "} name={"Social Medila"} />
         </header>
-        <ul className="list">
-          <li>
-            <Paragraph css={"text-color-white-200"} name={"Instgram"} />
-          </li>
-          <li>
-            <Paragraph css={"text-color-white-200"} name={"Linkedin"} />
-          </li>
-          <li>
-            <Paragraph css={"text-color-white-200"} name={"Githubº"} />
-          </li>
-        </ul>
+        <Social_Media />
       </section>
       <div className="owner">
         <Title_2 css={"text-color-white-200"} name={"{};"} />
