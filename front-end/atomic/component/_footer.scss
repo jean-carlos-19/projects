@@ -1,7 +1,4 @@
 .footer {
-  position: sticky;
-  left: 0;
-  bottom: 0;
   width: 100%;
   padding: 1rem;
   @include display-flex(row, space-between, center);
