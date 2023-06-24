@@ -16,7 +16,7 @@ const Projects = () => {
         return_item={get_location}
         item_focus={name}
       />
-      <Not_Found />
+      <Not_Found data={projects}/>
       <Loading state={loading} />
       <div className="body">
         {name === NAMES_PROJECTS.WEB
