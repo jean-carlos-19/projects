@@ -1,6 +1,6 @@
 "use client"; // This is a client component 👈🏽
 import { NAMES_PROJECTS } from "@global/names/projects";
-import { List, Loading, Project } from "@project/presentation/component";
+import { List, Loading, Project, Not_Found } from "@project/presentation/component";
 import { useLoading } from "@global/states";
 import { useProjects } from "./hooks";
 import { List_Entity } from "@project/domain/entity";
@@ -16,6 +16,7 @@ const Projects = () => {
         return_item={get_location}
         item_focus={name}
       />
+      <Not_Found />
       <Loading state={loading} />
       <div className="body">
         {name === NAMES_PROJECTS.WEB
