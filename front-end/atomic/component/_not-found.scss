@@ -1,4 +1,9 @@
 .not-found{
     height: 45.8vh;
     @include margin-top-global(1rem);
+    @include display-flex(column,center,center);
+    img{
+        max-width: 100%;
+        height: 100%;
+    }
 }

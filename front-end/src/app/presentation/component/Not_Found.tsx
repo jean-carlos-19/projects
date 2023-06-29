@@ -1,12 +1,13 @@
 import React from 'react'
 import {Title_1  } from "@project/presentation/element";
 interface not_found_props {
-    data: []
+    data: [];
+    loading?:boolean
 }
 const Not_Found = (props: not_found_props) => {
-    const { data } = props;
+    const { data, loading } = props;
     return (
-        data.length === 0 ? (
+        !loading && data.length === 0 ? (
             <figure className='not-found'>
                 <img src="/not-found.svg" alt="" />
                 <Title_1 css={"text-color-white-200"} name={"Aun no existen proyectos"} />

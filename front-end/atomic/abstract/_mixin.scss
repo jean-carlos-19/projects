@@ -3,6 +3,7 @@
   flex-direction: $orientation;
   align-items: $secondary-axis;
   justify-content: $main-axis;
+  flex-wrap: nowrap;
 }
 @mixin font-sizes($font-size, $line-heiht) {
 

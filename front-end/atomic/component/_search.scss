@@ -9,12 +9,12 @@
     margin-left: 32px;
   }
 
-  .title {
-    flex: 1 25% 0;
+  .title-2 {
+    flex-basis: 25%;
   }
 
   section {
-    flex: 1 calc(100% - (40px - 25%)) 0;
+    flex-basis: calc(100% - (25% + 32px));
     padding: 8px 16px;
     border-radius: 4px;
     background-color: rgba(131, 126, 126, 0.1);
@@ -23,7 +23,6 @@
       margin-left: 16px;
     }
     input {
-      flex: 1 calc(100% - (16px + 20px)) 0;
       width: 100%;
       background-color: transparent;
       border: none;

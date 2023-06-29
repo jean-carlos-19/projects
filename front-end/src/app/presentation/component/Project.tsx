@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Title_2, Paragraph } from "@project/presentation/element";
 import { List } from "./List";
 interface project_props {
