@@ -35,9 +35,9 @@ class Postgresql_Repository implements Project_Service {
             '${conclusion}',
             '${category}',
             '${tecnologies}',
+            '${url_image}',
             '${url_demo}',
-            '${url_github}',
-            '${url_image}'
+            '${url_github}'
         );
     `);
   };
