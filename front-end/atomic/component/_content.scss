@@ -1,8 +1,8 @@
 .content {
   width: 100%;
   padding: 0 1rem 1rem;
-  @include display-flex(column,flex-start,flex-start);
-  @include  margin-top-global(1rem);
+  @include display-flex(column, flex-start, flex-start);
+  @include margin-top-global(1rem);
 
   p {
     width: inherit;
@@ -11,13 +11,14 @@
     overflow: hidden;
     font-weight: normal;
   }
-  
-  button{
+
+  button {
     align-self: center;
     border-radius: .5rem;
     padding: .5rem 3rem;
     border: 1px solid white;
-    p{
+
+    p {
       font-weight: bold;
     }
   }
