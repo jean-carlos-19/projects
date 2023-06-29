@@ -1,5 +1,5 @@
 import { Title_2, Paragraph } from "@project/presentation/element";
-import { List } from "./List";
+import { Tecnologies } from "./Tecnologies";
 interface project_props {
   url_image: string;
   title: string;
@@ -12,9 +12,12 @@ const Project = (props: project_props) => {
     <section className="project bg-col-black-200">
       <img src={url_image} alt={"Imagen de portada"} />
       <div className="content">
+        <Tecnologies items={tecnologies} />
         <Title_2 css={"text-color-white-200"} name={title} />
         <Paragraph css={"text-color-white-200"} name={paragraph} />
-        <List items={tecnologies} item_focus={""} return_item={() => null} />
+        <button className="bg-col-black-200  text-color-white-200" onClick={()=> console.log("mostrar")}>
+          <Paragraph css={"text-color-white-200"} name={"Ver mas"} />
+        </button>
       </div>
     </section>
   );

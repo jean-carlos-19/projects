@@ -1,4 +1,5 @@
 import React from "react";
+import {Paragraph} from '@project/presentation/element'
 
 interface list_props {
   items: string[];

@@ -1,27 +1,24 @@
 .content {
+  width: 100%;
   padding: 0 1rem 1rem;
-
-  & > * + * {
-    margin-top: 10px;
-  }
+  @include display-flex(column,flex-start,flex-start);
+  @include  margin-top-global(1rem);
 
   p {
+    width: inherit;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+    font-weight: normal;
   }
-  .list {
-    height: 80px;
-    @include display-flex(row, space-between, center);
-    flex-wrap: wrap;
-    align-content: space-between;
-    .item {
-      border-radius: 0.5rem;
-      background-color: var(--color-white-100);
-      button {
-        color: var(--color-black-200);
-        font-weight: bold !important;
-      }
+  
+  button{
+    align-self: center;
+    border-radius: .5rem;
+    padding: .5rem 3rem;
+    border: 1px solid white;
+    p{
+      font-weight: bold;
     }
   }
 }

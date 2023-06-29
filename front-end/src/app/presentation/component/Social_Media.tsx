@@ -11,7 +11,7 @@ const Social_Media = () => {
                 <Paragraph css={"text-color-white-200"} name={"Linkedin"} />
             </li>
             <li>
-                <Paragraph css={"text-color-white-200"} name={"Githubº"} />
+                <Paragraph css={"text-color-white-200"} name={"Github"} />
             </li>
         </ul>
     )
